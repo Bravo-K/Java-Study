@@ -10,9 +10,12 @@
 
      <kbd>FileSystemXmlApplicatoinContext</kbd>：通过指定的文件系统路径(绝对路径)中寻找指定的XML配置文件,找到并装载完成ApplicationContext的实例化工作.
 
+
 **依赖注入**：依赖注入的作用就是在使用Spring框架创建对象时,动态地将其所依赖的对象注入Bean组件中,其实现方式通常有两种,一种是属性*setter方法*注入,另一种是*构造方法*注入.
 
+
 **程序示例**
+
 配置文件
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -32,3 +35,16 @@
 </beans>
 ```
 测试类
+```
+public void test() {
+		
+        // 创建Spring的IOC对象
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+		// 从IOC容器中获取Bean实例
+		HiSpring5 hiSpring5 = (HiSpring5) applicationContext.getBean("SpringTestID");
+        
+		hiSpring5.ouputName();
+
+}
+```	
