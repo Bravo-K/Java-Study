@@ -3,6 +3,6 @@
 ## MarkDown
 [我的博客](https://blog.csdn.net/Coming_Quietly)
 
-[如何写个人博客](https://blog.csdn.net/SIMBA1949/article/details/79001226)
+[写个人博客的Markdown格式](https://blog.csdn.net/SIMBA1949/article/details/79001226)
 ## 框架
 ### SpringBoot
