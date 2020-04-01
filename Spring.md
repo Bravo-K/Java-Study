@@ -1,6 +1,6 @@
 # Spring
 ## IOC控制反转
-### **Spring 核心容器**： *BeanFatory*和*ApplicatoinContext*
+### Spring 核心容器： *BeanFatory*和*ApplicatoinContext*
 
 - <kbd>BeanFatory</kbd>为基础类型的Ioc容器,简单的说就是一个管理Bean的工厂,它主要负责初始化各种Bean,并调用它们的生命周期方法.
 
@@ -11,10 +11,11 @@
      <kbd>FileSystemXmlApplicatoinContext</kbd>：通过指定的文件系统路径(绝对路径)中寻找指定的XML配置文件,找到并装载完成ApplicationContext的实例化工作.
 
 
-### **依赖注入**：依赖注入的作用就是在使用Spring框架创建对象时,动态地将其所依赖的对象注入Bean组件中,其实现方式通常有两种,一种是属性*setter方法*注入,另一种是*构造方法*注入.
+### 依赖注入
+依赖注入的作用就是在使用Spring框架创建对象时,动态地将其所依赖的对象注入Bean组件中,其实现方式通常有两种,一种是属性*setter方法*注入,另一种是*构造方法*注入.
 
 
-### **程序示例**
+### 程序示例
 
 配置文件
 ```
