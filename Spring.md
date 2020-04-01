@@ -4,15 +4,15 @@
 
 - `BeanFatory`为基础类型的Ioc容器,简单的说就是一个管理Bean的工厂,它主要负责初始化各种Bean,并调用它们的生命周期方法.
 
-- <kbd>ApplicationContext</kbd>是BeanFactory的子接口,也称为应用上下文,不仅包含了BeanFactory的所有功能,还添加了对国际化,资源访问,事件传播等方面的支持.有两种创建ApplicatoinContext接口实例的方法：
+- `ApplicationContext`是BeanFactory的子接口,也称为应用上下文,不仅包含了BeanFactory的所有功能,还添加了对国际化,资源访问,事件传播等方面的支持.有两种创建ApplicatoinContext接口实例的方法：
 
-     <kbd>ClassPathXmlApplicationContext</kbd>：通过类路径classPath中寻找指定的XML配置文件,找到并装载完成ApplicationContext的实例化工作.
+     `ClassPathXmlApplicationContext`：通过类路径classPath中寻找指定的XML配置文件,找到并装载完成ApplicationContext的实例化工作.
 
-     <kbd>FileSystemXmlApplicatoinContext</kbd>：通过指定的文件系统路径(绝对路径)中寻找指定的XML配置文件,找到并装载完成ApplicationContext的实例化工作.
+     `FileSystemXmlApplicatoinContext`：通过指定的文件系统路径(绝对路径)中寻找指定的XML配置文件,找到并装载完成ApplicationContext的实例化工作.
 
 
 ### 依赖注入
-依赖注入的作用就是在使用Spring框架创建对象时,动态地将其所依赖的对象注入Bean组件中,其实现方式通常有两种,一种是属性*setter方法*注入,另一种是*构造方法*注入.
+依赖注入的作用就是在使用Spring框架创建对象时,动态地将其所依赖的对象注入Bean组件中,其实现方式通常有两种,一种是属性`setter方法`注入,另一种是`构造方法`注入.
 
 
 ### 程序示例
