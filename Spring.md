@@ -1,6 +1,6 @@
 # Spring
 ## IOC控制反转
-**Spring 核心容器**： ==BeanFatory==和==ApplicatoinContext==
+**Spring 核心容器**： ==BeanFatory==和ApplicatoinContext
 
 - <kbd>BeanFatory</kbd>为基础类型的Ioc容器,简单的说就是一个管理Bean的工厂,它主要负责初始化各种Bean,并调用它们的生命周期方法.
 
