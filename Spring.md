@@ -1,6 +1,6 @@
 # Spring
 ## IOC控制反转
-**Spring 核心容器**： *BeanFatory*和*ApplicatoinContext*
+### **Spring 核心容器**： *BeanFatory*和*ApplicatoinContext*
 
 - <kbd>BeanFatory</kbd>为基础类型的Ioc容器,简单的说就是一个管理Bean的工厂,它主要负责初始化各种Bean,并调用它们的生命周期方法.
 
@@ -11,10 +11,10 @@
      <kbd>FileSystemXmlApplicatoinContext</kbd>：通过指定的文件系统路径(绝对路径)中寻找指定的XML配置文件,找到并装载完成ApplicationContext的实例化工作.
 
 
-**依赖注入**：依赖注入的作用就是在使用Spring框架创建对象时,动态地将其所依赖的对象注入Bean组件中,其实现方式通常有两种,一种是属性*setter方法*注入,另一种是*构造方法*注入.
+### **依赖注入**：依赖注入的作用就是在使用Spring框架创建对象时,动态地将其所依赖的对象注入Bean组件中,其实现方式通常有两种,一种是属性*setter方法*注入,另一种是*构造方法*注入.
 
 
-**程序示例**
+### **程序示例**
 
 配置文件
 ```
@@ -39,12 +39,24 @@
 public void test() {
 		
         // 创建Spring的IOC对象
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-		// 从IOC容器中获取Bean实例
-		HiSpring5 hiSpring5 = (HiSpring5) applicationContext.getBean("SpringTestID");
+	// 从IOC容器中获取Bean实例
+	HiSpring5 hiSpring5 = (HiSpring5) applicationContext.getBean("SpringTestID");
         
-		hiSpring5.ouputName();
+	hiSpring5.ouputName();
 
 }
+
+public void test2() {
+		
+        ApplicationContext context = new ClassPathXmlApplicationContext(
+            new String[]{"applicationContext1.xml","applicationContext2.xml"})
+
+       //可以通过调用`ApplicationContext`的`getBean`方法获得对象
+       //getBean方法会查询`id`为`product`且类型为`Product`的`bean`对象.
+       Product product = context.getBean("product",Product.class);
+
+}
+
 ```	
