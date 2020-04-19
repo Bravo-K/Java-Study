@@ -8,3 +8,9 @@
 - *尽可能地自动配置Spring*
 - *提供生产就绪型功能,如指标,健康检查和外部配置*
 - *绝对没有代码生成,对XML没有要求配置*
+- *减少开发、测试的时间和工作量，避免大量 maven 导入和各种版本冲突*
+## Spring Boot 的核心注解
+启动类上面的注解@SpringBootApplication是 Spring Boot 的核心注解，主要组合包含了以下 3 个注解：
+- @SpringBootConfiguration：组合了 @Configuration 注解，实现配置文件的功能。
+- @EnableAutoConfiguration：打开自动配置的功能，也可以关闭某个自动配置的选项，如关闭数据源自动配置功能： @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })。
+- @ComponentScan：Spring组件扫描。
